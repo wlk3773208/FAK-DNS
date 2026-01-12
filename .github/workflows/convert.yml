@@ -2,7 +2,9 @@ name: Convert Conf Files and Push to Repo
 
 on:
   schedule:
-    - cron: "0 1 * * *" # every day
+    # 北京/香港时间 凌晨1点 = UTC 前一天 17:00
+    # 每3天执行一次
+    - cron: '0 17 */3 * *'
   workflow_dispatch:
 
 jobs:
